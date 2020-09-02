@@ -8,9 +8,9 @@ from selenium.webdriver.common.keys import Keys
 class Test(unittest.TestCase):
 
     def test_no_pets(self):
-        r = requests.get("https://petstore.swagger.io/v2/pet/1")
-        print(r.status_code)
-        assert r.status_code == 404
+        url = requests.get("https://reqres.in/api/users/1")
+        print("User was found: " + str(url.status_code))
+        assert url.status_code == 200
 
 if __name__ == "__main__":
     unittest.main()
