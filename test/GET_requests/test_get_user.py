@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 
 class Test(unittest.TestCase):
 
-    def test_no_pets(self):
+    def test_get_user(self):
         url = requests.get("https://reqres.in/api/users/1")
         print("User was found: " + str(url.status_code))
         assert url.status_code == 200
